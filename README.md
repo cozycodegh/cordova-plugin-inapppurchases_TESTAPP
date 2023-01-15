@@ -26,13 +26,13 @@ git clone https://github.com/cozycodegh/cordova-plugin-inapppurchases_TESTAPP
 cp -r cordova-plugin-inapppurchases_TESTAPP/* new_test_dir/
 ```
 6. Edit the `www/js/index.js` file to include your product ids:
-```
+```js
 var product_id_1 = "ca.cozycode.non_consumable_product";
 var product_id_2 = "";
 var product_id_3 = "";
 ```
   * For Android, also create a `www/manifest.json` file with the `base64 billing key` in this test project:
-```
+```js
 { "play_store_key": "<Base64-encoded public key from the Google Play Store>" }
 ```
 7. Run the test app on different platforms:
