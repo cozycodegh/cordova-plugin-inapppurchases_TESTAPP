@@ -1,6 +1,6 @@
 # Cordova-Plugin-InAppPurchases Testing App
 
-This a test app to test in-app purchases and subscriptions with [**Cordova**](https://cordova.apache.org/) and [**cordova-plugin-inapppurchases**](https://github.com/cozycodegh/cordova-plugin-inapppurchases#Cordova-Plugin-InAppPurchases) by [cozycode.ca](cozycode.ca).
+This a working app to test in-app purchases and subscriptions with [**Cordova**](https://cordova.apache.org/) and [**cordova-plugin-inapppurchases**](https://github.com/cozycodegh/cordova-plugin-inapppurchases#Cordova-Plugin-InAppPurchases) by [cozycode.ca](cozycode.ca).
 
 How to test in-app purchases with cordova:
 1. Have your app identifier string (eg. `io.cordova.hellocordova`) <br/>
