@@ -38,7 +38,8 @@ var product_id_3 = "";
 7. Run the test app on different platforms:
 ```
 cordova platform add ios
-cordova run ios
+cordova build ios
+open platforms/ios/APPNAME.xcworkspace/
 cordova platform add android
 cordova run --device android
 ```
