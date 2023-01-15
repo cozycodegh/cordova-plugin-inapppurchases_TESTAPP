@@ -5,7 +5,7 @@ This a test app to test in-app purchases and subscriptions with [**Cordova**](ht
 How to test in-app purchases with cordova:
 1. Have your app identifier string (eg. `io.cordova.hellocordova`) <br/>
     Log into App Store Connect and Google Play to create your apps, make a "bundle identifier" (aka widget id, or app identifier)
-2. Have create your product ids ready<br/>
+2. Have your product ids, <br/>
     [See testing tips to create in-app products and subscriptions](https://github.com/cozycodegh/cordova-plugin-inapppurchases#testing-tips)
 3. Create a cordova project to test in:
 ```
