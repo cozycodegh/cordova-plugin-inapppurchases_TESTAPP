@@ -32,14 +32,14 @@ document.addEventListener('deviceready', onDeviceReady, false);
 /* (c) cozycode.ca */
 function testPlugin(){
     try { inAppPurchases; }
-    catch {
-        showTestResults("Error: plugin not installed","run `cordova plugin add cordova-plugin-inapppurchases` to install to the current project");
+    catch (err) {
+        showTestResults("Error: plugin not installed",'run `cordova plugin add cordova-plugin-inapppurchases` to install to the current project');
         return false;
     }
     return true;
 }
 function testGet(){
-    if (!testPlugin) return;
+    if (!testPlugin()) return;
     var productId1 = document.getElementById("product1");
     if (!productId1){ alert("missing page element"); return; }
     var productId2 = document.getElementById("product2");
@@ -61,7 +61,7 @@ function testGet(){
     });
 }
 function testRestore(){
-    if (!testPlugin) return;
+    if (!testPlugin()) return;
     //using plugin:
     inAppPurchases.restorePurchases().then(function(products){
         showTestResults("restorePurchases()",products);  
@@ -70,7 +70,7 @@ function testRestore(){
     });
 }
 function testPurchase(productId){
-    if (!testPlugin) return;
+    if (!testPlugin()) return;
     //using plugin:
     inAppPurchases.purchase(productId).then(function(purchase){
         showTestResults("purchase("+productId+")",purchase);  
@@ -79,7 +79,7 @@ function testPurchase(productId){
     });
 }
 function testCompletePurchase(productId){
-    if (!testPlugin) return;
+    if (!testPlugin()) return;
     //using plugin:
     inAppPurchases.completePurchase(productId).then(function(purchase){
         showTestResults("completePurchase("+productId+")",purchase);  
@@ -88,7 +88,6 @@ function testCompletePurchase(productId){
     });
 }
 function showTestResults(title,results){
-    if (!testPlugin) return;
     var result_heading = document.getElementById("inAppPurchases_heading");
     var result_output = document.getElementById("inAppPurchases_result"); 
     if (!result_heading || !result_output){ 
@@ -100,37 +99,37 @@ function showTestResults(title,results){
     else result_output.innerHTML = "";
 }
 function testPurchase1(){
-    if (!testPlugin) return;
+    if (!testPlugin()) return;
     var productId1 = document.getElementById("product1");
     if (!productId1){ alert("missing page element"); return; }
     testPurchase(productId1.value);
 }
 function testPurchase2(){
-    if (!testPlugin) return;
+    if (!testPlugin()) return;
     var productId2 = document.getElementById("product2");
     if (!productId2){ alert("missing page element"); return; }
     testPurchase(productId2.value);
 }
 function testPurchase3(){
-    if (!testPlugin) return;
+    if (!testPlugin()) return;
     var productId3 = document.getElementById("product3");
     if (!productId3){ alert("missing page element"); return; }
     testPurchase(productId3.value);
 }
 function testCompletePurchase1(){
-    if (!testPlugin) return;
+    if (!testPlugin()) return;
     var productId1 = document.getElementById("product1");
     if (!productId1){ alert("missing page element"); return; }
     testCompletePurchase(productId1.value);
 }
 function testCompletePurchase2(){
-    if (!testPlugin) return;
+    if (!testPlugin()) return;
     var productId2 = document.getElementById("product2");
     if (!productId2){ alert("missing page element"); return; }
     testCompletePurchase(productId2.value);
 }
 function testCompletePurchase3(){
-    if (!testPlugin) return;
+    if (!testPlugin()) return;
     var productId3 = document.getElementById("product3");
     if (!productId3){ alert("missing page element"); return; }
     testCompletePurchase(productId3.value);
