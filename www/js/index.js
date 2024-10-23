@@ -144,7 +144,7 @@ function startInAppPurchasesTest(){
     var pi1 = document.getElementById("product1");
     if (!pi1) alert("missing page element");
     else pi1.value = product_id_1;
-    var pi2 = document.getElementById("product3");
+    var pi2 = document.getElementById("product2");
     if (!pi2) alert("missing page element");
     else pi2.value = product_id_2;
     var pi3 = document.getElementById("product3");
